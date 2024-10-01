@@ -1,0 +1,197 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emily Carter",
+        "review": "Prof. Carter explains complex mathematical concepts with clarity and patience. Highly recommended!",
+        "subject": "Math",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Michael Thompson",
+        "review": "Engaging lectures but the pace can be a bit fast at times.",
+        "subject": "Math",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Sarah Lee",
+        "review": "Challenging course material, but Prof. Lee provides excellent support and resources.",
+        "subject": "Math",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. James Rodriguez",
+        "review": "Prof. Rodriguez is knowledgeable, but his lectures could be more interactive.",
+        "subject": "Math",
+        "stars": 3
+      },
+      {
+        "professor": "Dr. Linda Nguyen",
+        "review": "Great professor! Makes abstract concepts easy to understand.",
+        "subject": "Math",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Robert Brown",
+        "review": "Good lectures with plenty of real-world applications.",
+        "subject": "Math",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Jessica Davis",
+        "review": "Prof. Davis is very approachable and helpful during office hours.",
+        "subject": "Math",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. William Martinez",
+        "review": "Lectures are well-structured, but assignments can be overwhelming.",
+        "subject": "Math",
+        "stars": 3
+      },
+      {
+        "professor": "Dr. Karen Wilson",
+        "review": "Prof. Wilson brings enthusiasm to the subject, making classes enjoyable.",
+        "subject": "Math",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. David Anderson",
+        "review": "Clear explanations, but could use more examples in lectures.",
+        "subject": "Math",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Laura Scott",
+        "review": "Prof. Scott integrates engineering principles seamlessly into the curriculum.",
+        "subject": "Engineering",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Kevin Turner",
+        "review": "Challenging courses with a focus on practical skills.",
+        "subject": "Engineering",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Megan Harris",
+        "review": "Prof. Harris provides valuable industry insights and hands-on projects.",
+        "subject": "Engineering",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Brian Clark",
+        "review": "Lectures are informative, but sometimes lack depth in certain topics.",
+        "subject": "Engineering",
+        "stars": 3
+      },
+      {
+        "professor": "Dr. Stephanie Lewis",
+        "review": "Excellent support and feedback on assignments.",
+        "subject": "Engineering",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Jason Walker",
+        "review": "Prof. Walker is very knowledgeable, though his teaching style is a bit rigid.",
+        "subject": "Engineering",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Angela Hall",
+        "review": "Engaging lectures with a good balance of theory and practice.",
+        "subject": "Engineering",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Matthew Young",
+        "review": "Prof. Young encourages critical thinking and problem-solving skills.",
+        "subject": "Engineering",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Rebecca King",
+        "review": "Sometimes the course material feels repetitive, but overall a good experience.",
+        "subject": "Engineering",
+        "stars": 3
+      },
+      {
+        "professor": "Dr. Daniel Wright",
+        "review": "Prof. Wright is passionate about engineering and inspires students to excel.",
+        "subject": "Engineering",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Olivia Green",
+        "review": "Provides comprehensive coverage of the subject with clear explanations.",
+        "subject": "Engineering",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Sophia Baker",
+        "review": "Prof. Baker fosters a collaborative learning environment.",
+        "subject": "English",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Ethan Gonzalez",
+        "review": "Engaging discussions and insightful feedback on writing assignments.",
+        "subject": "English",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Isabella Perez",
+        "review": "Prof. Perez's lectures are well-organized and thought-provoking.",
+        "subject": "English",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Noah Ramirez",
+        "review": "Great emphasis on critical analysis and literary theory.",
+        "subject": "English",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Mia Thomas",
+        "review": "Prof. Thomas is approachable and provides constructive feedback.",
+        "subject": "English",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Lucas Hernandez",
+        "review": "Challenging course with a focus on diverse literary genres.",
+        "subject": "English",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Ava Moore",
+        "review": "Prof. Moore encourages creative thinking and original ideas.",
+        "subject": "English",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Liam Taylor",
+        "review": "Lectures are informative, but more interactive sessions would be beneficial.",
+        "subject": "English",
+        "stars": 3
+      },
+      {
+        "professor": "Dr. Charlotte Martin",
+        "review": "Prof. Martin integrates multimedia resources effectively into the curriculum.",
+        "subject": "English",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Benjamin Jackson",
+        "review": "Provides a comprehensive overview of literary movements and their contexts.",
+        "subject": "English",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Amelia White",
+        "review": "Prof. White is passionate about literature and inspires students to appreciate it deeply.",
+        "subject": "English",
+        "stars": 5
+      }
+    ]
+  }
+  
