@@ -72,6 +72,7 @@ The application uses a custom Material-UI theme, which is defined in src/app/the
 
 **RAG Setup
 **
+
 The setup_rag.py script handles the creation of the Pinecone index and processes review data, enabling efficient vector search capabilities.
 
 Contributing
