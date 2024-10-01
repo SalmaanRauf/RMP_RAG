@@ -1,5 +1,6 @@
 **Rate My Professor AI Assistant
 **
+
 This project is an AI-powered assistant for Rate My Professor, designed to help users retrieve information about professors and courses through natural language queries.
 
 Technologies Used
