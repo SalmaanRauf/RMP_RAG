@@ -10,7 +10,7 @@ export default function Home() {
     { role: 'assistant', content: "Hi! I'm the Course Selection assistant. How can I help you today?" }
   ]);
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

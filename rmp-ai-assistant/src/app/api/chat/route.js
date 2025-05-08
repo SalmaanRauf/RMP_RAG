@@ -3,6 +3,7 @@
 import { NextResponse } from 'next/server'
 import { Pinecone } from "@pinecone-database/pinecone"
 import OpenAI from 'openai'
+import { TextEncoder } from 'util'
 
 // Define the system prompt for the course advisor
 const systemPrompt = `
