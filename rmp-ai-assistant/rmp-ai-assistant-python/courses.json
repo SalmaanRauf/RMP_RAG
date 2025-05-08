@@ -1,0 +1,464 @@
+{
+  "courses": [
+    {
+      "code": "CPSC 120",
+      "title": "Introduction to Programming",
+      "units": 3,
+      "year": "First Year",
+      "category": "Core Requirements",
+      "description": "Introduction to the concepts of computer programming. Fundamentals of programming including variables, data types, control structures, functions, and basic input/output operations.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 121",
+      "title": "Object-Oriented Programming",
+      "units": 3,
+      "year": "First Year",
+      "category": "Core Requirements",
+      "description": "Introduction to object-oriented programming concepts including classes, objects, inheritance, polymorphism, and encapsulation.",
+      "prerequisites": ["CPSC 120"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "MATH 150A",
+      "title": "Calculus I",
+      "units": 4,
+      "year": "First Year",
+      "category": "Core Requirements",
+      "description": "Limits, continuity, derivatives, applications of the derivative, and introduction to integration.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "MATH 150B",
+      "title": "Calculus II",
+      "units": 4,
+      "year": "First Year",
+      "category": "Core Requirements",
+      "description": "Techniques of integration, applications of the integral, sequences, series, parametric equations, and polar coordinates.",
+      "prerequisites": ["MATH 150A"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "MATH 170A",
+      "title": "Mathematical Structures I",
+      "units": 3,
+      "year": "First Year",
+      "category": "Core Requirements",
+      "description": "First course in discrete mathematical structures. Sets, logic, methods of proof, combinatorics, and graph theory.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "MATH 170B",
+      "title": "Mathematical Structures II",
+      "units": 3,
+      "year": "First Year",
+      "category": "Core Requirements",
+      "description": "Second course in discrete mathematical structures. Relations, recurrence relations, functions, models of computation, and introduction to formal languages.",
+      "prerequisites": ["MATH 170A"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 131",
+      "title": "Data Structures",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Design and implementation of data structures including arrays, stacks, queues, linked lists, trees, and hash tables. Analysis of algorithms for efficiency and correctness.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 223C",
+      "title": "C Programming",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Programming in the C language, focusing on pointers, memory management, and system-level programming concepts.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 223J",
+      "title": "Java Programming",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Programming in the Java language, focusing on object-oriented design, interfaces, collections, and GUI development.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 223N",
+      "title": "Visual C# Programming",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Programming in C# with emphasis on Windows application development, .NET framework, and LINQ.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 223P",
+      "title": "Python Programming",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Programming in Python with emphasis on scripting, data processing, and scientific computing applications.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 223W",
+      "title": "Swift Programming",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Programming in Swift with emphasis on iOS application development and Apple ecosystem integration.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 240",
+      "title": "Computer Organization and Assembly Language",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Core Requirements",
+      "description": "Introduction to computer organization, architecture, and assembly language programming. Includes number systems, digital logic, and processor organization.",
+      "prerequisites": ["CPSC 131"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 351",
+      "title": "Operating Systems Concepts",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Principles of operating systems: process management, memory management, file systems, and device management. Concepts of multithreading, scheduling, and synchronization.",
+      "prerequisites": ["CPSC 131", "CPSC 240"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 335",
+      "title": "Algorithm Engineering",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Design and analysis of computer algorithms including divide-and-conquer, greedy methods, dynamic programming, and backtracking. Includes complexity analysis and NP-completeness.",
+      "prerequisites": ["CPSC 131", "MATH 170B"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 332",
+      "title": "File Structures and Database Systems",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Fundamental concepts of database systems, data modeling, relational databases, SQL, and database design principles.",
+      "prerequisites": ["CPSC 131"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 362",
+      "title": "Foundations of Software Engineering",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Principles of software engineering including requirements analysis, design, implementation, testing, and project management.",
+      "prerequisites": ["CPSC 131"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 471",
+      "title": "Computer Communications",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Introduction to computer networks, protocols, and distributed systems. Covers OSI model, TCP/IP, routing, and network security basics.",
+      "prerequisites": ["CPSC 351"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 311",
+      "title": "Technical Writing",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Principles of effective technical writing for computer science and engineering. Includes documentation, reports, proposals, and presentations.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "MATH 338",
+      "title": "Statistics Applied to Natural Sciences",
+      "units": 4,
+      "year": "Third Year",
+      "category": "Core Requirements",
+      "description": "Statistical methods for scientific data analysis, including probability distributions, hypothesis testing, regression, and ANOVA.",
+      "prerequisites": ["MATH 150B"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 323",
+      "title": "Compilers and Languages",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Core Requirements",
+      "description": "Principles of programming language design and implementation. Lexical analysis, parsing, semantic analysis, and code generation.",
+      "prerequisites": ["CPSC 240", "CPSC 131"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 315",
+      "title": "Professional Ethics in Computing",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Core Requirements",
+      "description": "Ethical and social issues in computing. Professional responsibilities, intellectual property, privacy, and social impact of technology.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 481",
+      "title": "Artificial Intelligence",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Core Requirements",
+      "description": "Introduction to artificial intelligence concepts including search algorithms, knowledge representation, reasoning, planning, and machine learning.",
+      "prerequisites": ["CPSC 335"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 440",
+      "title": "Computer System Architecture",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Core Requirements",
+      "description": "Advanced computer architecture concepts including pipelining, memory hierarchy, multiprocessors, and performance evaluation.",
+      "prerequisites": ["CPSC 240"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 490",
+      "title": "Undergraduate Seminar in Computer Science",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Core Requirements",
+      "description": "Current topics in computer science presented by faculty and industry professionals. Includes research methods and technical communication.",
+      "prerequisites": ["Senior standing"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 491",
+      "title": "Senior Capstone Project in Computer Science",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Core Requirements",
+      "description": "Team-based software development project applying software engineering principles to solve real-world problems.",
+      "prerequisites": ["CPSC 362", "Senior standing"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 301",
+      "title": "Programming Lab Practicum",
+      "units": 2,
+      "year": "Any",
+      "category": "Web & Mobile Development",
+      "description": "Hands-on programming experience solving practical problems. Reinforces programming concepts through implementation.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 349",
+      "title": "Web Front-End Engineering",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Web & Mobile Development",
+      "description": "Client-side web development using HTML, CSS, JavaScript, and modern frameworks. Covers responsive design and user experience principles.",
+      "prerequisites": ["CPSC 131"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 449",
+      "title": "Web Back-End Engineering",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Web & Mobile Development",
+      "description": "Server-side web development including databases, APIs, authentication, and deployment. Uses modern web frameworks and cloud services.",
+      "prerequisites": ["CPSC 349"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 411",
+      "title": "Mobile Device App Programming",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Web & Mobile Development",
+      "description": "Cross-platform mobile application development using frameworks like React Native or Flutter. Covers UI design, data storage, and device APIs.",
+      "prerequisites": ["CPSC 131"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 411A",
+      "title": "Mobile Programming for Android",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Web & Mobile Development",
+      "description": "Native Android application development using Kotlin or Java. Covers Android SDK, activities, fragments, and material design.",
+      "prerequisites": ["CPSC 131"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 352",
+      "title": "Cryptography",
+      "units": 3,
+      "year": "Third Year",
+      "category": "Security & Cryptography",
+      "description": "Principles of modern cryptography including symmetric and asymmetric encryption, hash functions, digital signatures, and key exchange protocols.",
+      "prerequisites": ["CPSC 131", "MATH 170B"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 253",
+      "title": "Cybersecurity Foundations and Principles",
+      "units": 3,
+      "year": "Second Year",
+      "category": "Security & Cryptography",
+      "description": "Introduction to cybersecurity concepts, threats, vulnerabilities, and basic defense mechanisms. Covers security policies and risk management.",
+      "prerequisites": ["CPSC 121"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "CPSC 454",
+      "title": "Cloud Computing and Security",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Security & Cryptography",
+      "description": "Cloud computing architectures, services, and security considerations. Includes virtualization, containerization, and secure cloud deployment.",
+      "prerequisites": ["CPSC 351"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 455",
+      "title": "Web Security",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Security & Cryptography",
+      "description": "Security issues in web applications including XSS, CSRF, SQL injection, and authentication vulnerabilities. Covers secure coding practices.",
+      "prerequisites": ["CPSC 349"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 456",
+      "title": "Network Security Fundamentals",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Security & Cryptography",
+      "description": "Network security principles, attacks, and defenses. Covers firewalls, intrusion detection, VPNs, and secure network design.",
+      "prerequisites": ["CPSC 471"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 458",
+      "title": "Malware Analysis",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Security & Cryptography",
+      "description": "Techniques for analyzing malicious software. Includes static and dynamic analysis, reverse engineering, and malware classification.",
+      "prerequisites": ["CPSC 351"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 459",
+      "title": "Blockchain Technologies",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "Security & Cryptography",
+      "description": "Principles of blockchain technology, distributed ledgers, consensus algorithms, and smart contracts. Applications in cryptocurrency and beyond.",
+      "prerequisites": ["CPSC 352"],
+      "semester": "Spring"
+    },
+    {
+      "code": "CPSC 375",
+      "title": "Intro to Data Science and Big Data",
+      "units": 3,
+      "year": "Third Year",
+      "category": "AI & Data Science",
+      "description": "Fundamentals of data science including data collection, cleaning, analysis, and visualization. Introduction to big data processing frameworks.",
+      "prerequisites": ["CPSC 131", "MATH 338"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 483",
+      "title": "Intro to Machine Learning",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "AI & Data Science",
+      "description": "Machine learning algorithms including supervised and unsupervised learning, neural networks, and model evaluation techniques.",
+      "prerequisites": ["CPSC 335", "MATH 338"],
+      "semester": "Fall"
+    },
+    {
+      "code": "CPSC 485",
+      "title": "Computational Bioinformatics",
+      "units": 3,
+      "year": "Fourth Year",
+      "category": "AI & Data Science",
+      "description": "Computational methods for analyzing biological data. Includes sequence alignment, phylogenetic analysis, and gene expression analysis.",
+      "prerequisites": ["CPSC 335"],
+      "semester": "Spring"
+    },
+    {
+      "code": "PHYS 226L",
+      "title": "Physics Lab",
+      "units": 1,
+      "year": "Any",
+      "category": "Science Electives",
+      "description": "Laboratory exercises demonstrating electricity and magnetism principles covered in PHYS 226.",
+      "prerequisites": ["PHYS 226 (concurrent enrollment allowed)"],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "PHYS 227",
+      "title": "Waves, Optics, and Modern Physics",
+      "units": 3,
+      "year": "Any",
+      "category": "Science Electives",
+      "description": "Calculus-based physics covering waves, optics, relativity, and quantum mechanics.",
+      "prerequisites": ["PHYS 226"],
+      "semester": "Spring"
+    },
+    {
+      "code": "PHYS 227L",
+      "title": "Physics Lab",
+      "units": 1,
+      "year": "Any",
+      "category": "Science Electives",
+      "description": "Laboratory exercises demonstrating waves, optics, and modern physics principles covered in PHYS 227.",
+      "prerequisites": ["PHYS 227 (concurrent enrollment allowed)"],
+      "semester": "Spring"
+    },
+    {
+      "code": "HONR 201B",
+      "title": "Honors Seminar: American Institutions",
+      "units": 3,
+      "year": "Any",
+      "category": "Graduation Requirement",
+      "description": "Analysis of American political institutions and processes. Satisfies the state requirement in U.S. Constitution and California state and local government.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    },
+    {
+      "code": "POSC 100",
+      "title": "American Government",
+      "units": 3,
+      "year": "Any",
+      "category": "Graduation Requirement",
+      "description": "American political institutions and processes. Satisfies the state requirement in U.S. Constitution and California state and local government.",
+      "prerequisites": [],
+      "semester": "Fall/Spring"
+    }
+  ]
+} 
