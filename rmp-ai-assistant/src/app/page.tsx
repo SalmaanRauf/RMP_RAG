@@ -7,7 +7,7 @@ import SendIcon from '@mui/icons-material/Send';
 export default function Home() {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi! I'm the Rate My Professor support assistant. How can I help you today?" }
+    { role: 'assistant', content: "Hi! I'm the Course Selection assistant. How can I help you today?" }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
@@ -19,15 +19,56 @@ export default function Home() {
   const sendMessage = async () => {
     if (message.trim() === '') return;
 
-    setIsLoading(true);
-    setMessages(prev => [...prev, { role: 'user', content: message }]);
+    const userMessage = { role: 'user', content: message };
+    setMessages(prev => [...prev, userMessage]);
     setMessage('');
+    setIsLoading(true);
 
-    // Simulating API call
-    setTimeout(() => {
-      setMessages(prev => [...prev, { role: 'assistant', content: "This is a simulated response. The actual AI integration is not implemented yet." }]);
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify([...messages, userMessage]),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      if (response.body) {
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let done = false;
+        let assistantMessage = { role: 'assistant', content: '' };
+        
+        setMessages(prev => [...prev, assistantMessage]);
+
+        while (!done) {
+          const { value, done: doneReading } = await reader.read();
+          done = doneReading;
+          
+          if (value) {
+            const chunkText = decoder.decode(value);
+            assistantMessage.content += chunkText;
+            
+            setMessages(prev => [
+              ...prev.slice(0, prev.length - 1),
+              { ...assistantMessage }
+            ]);
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: "I'm sorry, I encountered an error. Please try again later." 
+      }]);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
@@ -47,7 +88,7 @@ export default function Home() {
       fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     }}>
       <Typography variant="h5" sx={{ p: 3, borderBottom: '1px solid #2A2B32', fontWeight: 500, fontSize: '1.875rem' }}>
-        Rate My Professor AI Assistant
+        Course Selection Assistant
       </Typography>
       <Box sx={{ flexGrow: 1, overflow: 'auto', p: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box sx={{ width: '100%', maxWidth: '1000px' }}>
@@ -66,6 +107,7 @@ export default function Home() {
                   fontSize: '1.5625rem',
                   lineHeight: 1.6,
                   fontWeight: msg.role === 'user' ? 500 : 400,
+                  whiteSpace: 'pre-wrap',
                 }}>
                   {msg.content}
                 </Typography>
@@ -80,7 +122,7 @@ export default function Home() {
           <TextField
             fullWidth
             variant="outlined"
-            placeholder="Send a message..."
+            placeholder="Ask about courses, requirements, or get recommendations..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={handleKeyPress}
