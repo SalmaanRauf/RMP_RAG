@@ -1,11 +1,9 @@
-// app/api/chat/route.js
-
 import { NextResponse } from 'next/server'
 import { Pinecone } from "@pinecone-database/pinecone"
 import OpenAI from 'openai'
 import { TextEncoder } from 'util'
 
-// Define the system prompt for the course advisor
+// this tells the ai how to act as a course advisor
 const systemPrompt = `
 You are a helpful course advisor for computer science students. Your goal is to provide personalized course recommendations based on the student's major, interests, academic year, and semester. Use the course information in your knowledge base to suggest appropriate courses that align with their academic progression and interests.
 
@@ -21,10 +19,10 @@ If asked about specific courses, provide details about content, difficulty level
 
 export async function POST(req) {
   try {
-    // Handle incoming POST request
+    // grab the chat history from the request
     const data = await req.json()
 
-    // Initialize Pinecone and OpenAI
+    // setup pinecone and openai - need these for the rag system
     const pinecone = new Pinecone({
       apiKey: process.env.PINECONE_API_KEY,
     });
@@ -34,24 +32,24 @@ export async function POST(req) {
       apiKey: process.env.OPENAI_API_KEY,
     })
 
-    // Process the user's query and create an embedding
+    // get the user's last message and make an embedding
     const userMessage = data[data.length - 1].content
     const embeddingResponse = await openai.embeddings.create({
-      model: 'text-embedding-3-small',
+      model: 'text-embedding-3-small', // smaller model = cheaper + faster
       input: userMessage,
     })
     const embedding = embeddingResponse.data[0].embedding
 
-    // Query Pinecone for relevant courses
+    // search pinecone for similar course vectors
     const queryResponse = await index.query({
-      topK: 5,
-      includeMetadata: true,
+      topK: 5, // just get top 5 matches
+      includeMetadata: true, // need the actual course info
       vector: embedding,
       namespace: "courses",
     })
 
-    // Format the Pinecone results
-    let resultString = 'Here are the most relevant courses based on the query:\n\n'
+    // format the results into a nice text block for the ai
+    let resultString = 'Here are the most relevant courses based on your query:\n\n'
     queryResponse.matches.forEach((match, index) => {
       const course = match.metadata;
       resultString += `Course ${index + 1}:
@@ -66,27 +64,28 @@ Semester: ${course.semester}
 \n\n`
     })
 
-    // Prepare the OpenAI request by combining user query with results
+    // combine the user's question with the course data
     const lastMessage = data[data.length - 1]
     const combinedMessage = `${lastMessage.content}\n\n${resultString}`
     const previousMessages = data.slice(0, data.length - 1)
 
-    // Send request to OpenAI for chat completion
+    // ask gpt to respond based on the course data
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4-turbo',
+      model: 'gpt-4-turbo', // using the good model for better answers
       messages: [
         { role: 'system', content: systemPrompt },
         ...previousMessages,
         { role: 'user', content: combinedMessage },
       ],
-      stream: true,
+      stream: true, // stream the response for better ux
     })
 
-    // Set up streaming response
+    // setup the streaming response back to the frontend
     const stream = new ReadableStream({
       async start(controller) {
         const encoder = new TextEncoder()
 
+        // send each chunk as it comes in
         for await (const chunk of completion) {
           const content = chunk.choices[0]?.delta?.content || ''
           if (content) {
@@ -100,6 +99,7 @@ Semester: ${course.semester}
 
     return new NextResponse(stream)
   } catch (error) {
+    // oops something went wrong
     console.error('Error in course advisor API:', error)
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
   }

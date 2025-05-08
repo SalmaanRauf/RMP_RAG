@@ -5,31 +5,31 @@ from openai import OpenAI
 import os
 import json
 
-# Initialize Pinecone
+# get our api keys from .env file
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
-# Create a Pinecone index
+# try to make a new pinecone index (if it doesn't exist already)
 try:
     pc.create_index(
         name="course-advisor",
-        dimension=1536,
-        metric="cosine",
+        dimension=1536, # openai embeddings are 1536 dims
+        metric="cosine", # cosine similarity is good for text
         spec=ServerlessSpec(cloud="aws", region="us-east-1"),
     )
     print("Index created successfully")
 except Exception as e:
     print(f"Index may already exist: {e}")
 
-# Load the course data
+# load all our course data from json
 with open("courses.json", "r") as f:
     data = json.load(f)
 
 processed_data = []
 client = OpenAI()
 
-# Create embeddings for each course
+# loop through each course and create embeddings
 for course in data["courses"]:
-    # Create a rich text representation of the course for embedding
+    # make a text blob with all the course info
     course_text = f"""
     Course: {course['code']} - {course['title']}
     Units: {course['units']}
@@ -40,14 +40,14 @@ for course in data["courses"]:
     Semester: {course['semester']}
     """
     
-    # Generate embedding
+    # get embedding from openai
     response = client.embeddings.create(
         input=course_text, 
-        model="text-embedding-3-small"
+        model="text-embedding-3-small" # cheaper model is fine for this
     )
     embedding = response.data[0].embedding
     
-    # Prepare metadata
+    # save the embedding and all the course metadata
     processed_data.append(
         {
             "values": embedding,
@@ -66,7 +66,7 @@ for course in data["courses"]:
     )
     print(f"Processed {course['code']}")
 
-# Insert the embeddings into the Pinecone index
+# upload everything to pinecone
 index = pc.Index("course-advisor")
 upsert_response = index.upsert(
     vectors=processed_data,
@@ -74,5 +74,5 @@ upsert_response = index.upsert(
 )
 print(f"Upserted count: {upsert_response['upserted_count']}")
 
-# Print index statistics
+# check if it worked
 print(index.describe_index_stats()) 
