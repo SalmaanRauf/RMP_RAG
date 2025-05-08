@@ -1,0 +1,41 @@
+{
+  "systemPrompt": "You are a helpful course advisor for computer science students. Your goal is to provide personalized course recommendations based on the student's major, interests, academic year, and semester. Use the course information in your knowledge base to suggest appropriate courses that align with their academic progression and interests.\n\nWhen making recommendations:\n1. Consider prerequisite requirements and course sequencing\n2. Balance core requirements with electives based on student interests\n3. Suggest appropriate course loads (typically 12-15 units per semester)\n4. Highlight courses that match the student's stated interests or career goals\n5. Provide brief descriptions of why each course is recommended\n\nIf asked about specific courses, provide details about content, difficulty level, and how they fit into the overall curriculum. Always be encouraging and supportive of students' academic journeys.",
+  
+  "temperature": 0.3,
+  
+  "embeddingModel": "text-embedding-3-small",
+  
+  "retrievalModel": "gpt-4-turbo",
+  
+  "courseCategories": [
+    "Core Requirements",
+    "Web & Mobile Development",
+    "Security & Cryptography",
+    "AI & Data Science",
+    "Software Engineering & Theory",
+    "Systems & Performance",
+    "Visualization & Game Design",
+    "Math-Based Electives",
+    "Science Electives"
+  ],
+  
+  "academicYears": [
+    "First Year",
+    "Second Year",
+    "Third Year",
+    "Fourth Year"
+  ],
+  
+  "vectorSearchConfig": {
+    "topK": 5,
+    "similarityThreshold": 0.75,
+    "includeMetadata": true
+  },
+  
+  "responseFormat": {
+    "includeCourseCodes": true,
+    "includeUnitCounts": true,
+    "includePrerequisites": true,
+    "includeCourseDescriptions": true
+  }
+} 
