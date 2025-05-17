@@ -1,88 +1,62 @@
-**Rate My Professor AI Assistant
-**
+Rate My Professor AI Assistant
 
-This project is an AI-powered assistant for Rate My Professor, designed to help users retrieve information about professors and courses through natural language queries.
-
+This project is an AI‑powered assistant for Rate My Professor. It lets users retrieve professor and course information with natural‑language questions.
 Technologies Used
-Next.js 14
-React 18
+
+Next.js 14
+React 18
 TypeScript
-Material-UI (MUI)
-Tailwind CSS
-OpenAI API
-Pinecone Vector Database
-Python 3.12+
+Material‑UI (MUI)
+Tailwind CSS
+OpenAI API
+Pinecone Vector Database
+Python 3.12 +
 Features
-Chat-based interface for querying professor and course information
-AI-powered responses leveraging OpenAI's language models
-Vector search capabilities using Pinecone for efficient information retrieval
-Responsive design compatible with various screen sizes
+
+Chat‑based interface for querying professor and course data
+AI‑powered answers (OpenAI language models)
+Vector search via Pinecone for fast retrieval
+Responsive layout for all screen sizes
 Project Structure
-The project is divided into two main parts:
 
-Frontend (Next.js Application)
-
-Main chat interface: src/app/page.tsx
-Custom theme configuration: src/app/theme.ts
-Global styles: src/app/globals.css
-Backend (Python Scripts for Data Processing and RAG Setup)
-
-setup_rag.py: Script to create Pinecone index and process review data for Retrieval-Augmented Generation (RAG).
+The codebase is split into two parts.
+Frontend (Next.js app)
+• Main chat page: src/app/page.tsx
+• Custom MUI theme: src/app/theme.ts
+• Global styles: src/app/globals.css
+Backend (Python, RAG setup)
+• setup_rag.py – creates the Pinecone index and processes review data for Retrieval‑Augmented Generation (RAG)
 Setup and Installation
-Clone the Repository
 
-Clone the repository
-Navigate to the repository directory
-Install Frontend Dependencies
-
-Run npm install
-Set Up the Python Environment for the Backend
-
-Ensure you have Python 3.12+ installed.
-Set up your Python virtual environment:
-Create a virtual environment
-Activate it
-Install dependencies from requirements.txt
-Set Up Environment Variables
-
-Create a .env file in the root directory.
-Add the following variables:
+Clone the repository and open the project folder.
+Install frontend dependencies
+npm install
+Prepare the Python environment (Python 3.12+)
+– Create and activate a virtual environment
+– pip install -r requirements.txt
+Create a .env file in the root folder and add
 OPENAI_API_KEY=<your_openai_api_key>
 PINECONE_API_KEY=<your_pinecone_api_key>
-Run the RAG Setup Script
-
-Run the script to set up the Pinecone index.
-Start the Development Server
-
-Run npm run dev
+Build the Pinecone index
+python setup_rag.py
+Start the development server
+npm run dev
 Usage
-Once the application is running, users can interact with the AI assistant through the chat interface. They can ask questions related to professors, courses, and ratings, and the assistant will provide relevant information based on the Pinecone-indexed data.
 
+With the server running, open the chat page in your browser and ask about professors, courses, or ratings. The assistant returns answers sourced from the Pinecone‑indexed data.
 Key Components
-Chat Interface
 
-The main chat interface is implemented in src/app/page.tsx. It includes:
+Chat interface (src/app/page.tsx)
+• Message display area
+• Input field
+• Send button
+Theme configuration is in src/app/theme.ts.
+RAG Setup
 
-- A message display area
-- An input field for user queries
-- A send button for submitting messages
-- Theme Configuration
-
-The application uses a custom Material-UI theme, which is defined in src/app/theme.ts.
-
-**RAG Setup
-**
-
-The setup_rag.py script handles the creation of the Pinecone index and processes review data, enabling efficient vector search capabilities.
-
+setup_rag.py builds or updates the Pinecone index from review data, enabling efficient vector search.
 Contributing
-Contributions to improve the AI assistant or add new features are welcome. To contribute:
 
 Fork the repository.
 Create a new branch for your feature.
-Commit your changes.
-Push to your branch.
-Create a pull request.
-License
-This project is licensed under the MIT License.
-
+Commit and push your changes.
+Open a pull request.
